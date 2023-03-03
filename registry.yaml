@@ -1,0 +1,14 @@
+packages:
+- type: github_release
+  repo_owner: monochromegane
+  repo_name: the_platinum_searcher
+  description: A code search tool similar to ack and the_silver_searcher(ag). It supports multi platforms and multi encodings.
+  rosetta2: true
+  asset: pt_{{.OS}}_{{.Arch}}.tar.gz
+  format: tar.gz
+  files:
+  - name: pt
+    src: pt_{{.OS}}_{{.Arch}}/pt
+  supported_envs:
+  - darwin
+  - linux
