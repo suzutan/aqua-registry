@@ -4,8 +4,13 @@ packages:
   repo_name: the_platinum_searcher
   description: A code search tool similar to ack and the_silver_searcher(ag). It supports multi platforms and multi encodings.
   rosetta2: true
-  asset: pt_{{.OS}}_{{.Arch}}.tar.gz
+  asset: "pt_{{.OS}}_{{.Arch}}.{{.Format}}"
   format: tar.gz
+  format_overrides:
+  - goos: windows
+    format: zip
+  - goos: darwin
+    format: zip
   files:
   - name: pt
     src: pt_{{.OS}}_{{.Arch}}/pt
